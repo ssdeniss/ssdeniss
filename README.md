@@ -35,7 +35,7 @@ Another Dev Skills <br>
 ---
 <p>
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=docker,postman,powershell,maven,arduino" />
+    <img src="https://skillicons.dev/icons?i=docker,postman,powershell,arduino" />
   </a>
 </p>
 
@@ -43,7 +43,7 @@ Have experiece with <br>
 ---
 <p>
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=c,cpp,java,py,idea,linux, matlab,octave, nestjs, nextjs, nodejs, express, bash,spring" />
+    <img src="https://skillicons.dev/icons?i=c,cpp,java,py,idea,linux,matlab,octave,nextjs,bash,spring,maven" />
   </a>
 </p>
 
