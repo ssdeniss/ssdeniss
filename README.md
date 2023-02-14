@@ -20,14 +20,14 @@ Design <br>
 Backend Development <br> 
 ---
 <p>
-    <img src="https://skillicons.dev/icons?i=nodejs,spring,express,nestjs" />
+    <img src="https://skillicons.dev/icons?i=nodejs,spring,express,nestjs," />
 </p>
 
 Database <br>
 ---
 <p>
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=mongodb,mysql"/>
+    <img src="https://skillicons.dev/icons?i=mongodb,mysql,"/>
   </a>
 </p>
 
@@ -35,7 +35,7 @@ Another Dev Skills <br>
 ---
 <p>
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=docker,postman,powershell,arduino" />
+    <img src="https://skillicons.dev/icons?i=docker,postman,powershell,arduino," />
   </a>
 </p>
 
@@ -43,7 +43,7 @@ Have experiece with <br>
 ---
 <p>
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=c,cpp,java,py,idea,linux,matlab,octave,nextjs,bash,spring,maven" />
+    <img src="https://skillicons.dev/icons?i=c,cpp,java,py,idea,linux,matlab,octave,nextjs,bash,spring,maven," />
   </a>
 </p>
 
@@ -59,7 +59,7 @@ Game dev Skills <br>
 ---
 <p>
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=godot, reactnative" />
+    <img src="https://skillicons.dev/icons?i=godot," />
   </a>
 </p>
 
