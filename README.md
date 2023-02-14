@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Denis</h1>
-<h3 align="center">Frontend Developer && UI/UX Designer</h3>
+<h3 align="center">Frontend Developer & UI/UX Designer</h3>
 
 Frontend Development <br> 
 ---
