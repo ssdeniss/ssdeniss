@@ -39,7 +39,7 @@ Another Dev Skills <br>
   </a>
 </p>
 
-Have experiece with <br>
+Have Experiece With <br>
 ---
 <p>
   <a href="https://skillicons.dev">
@@ -55,7 +55,7 @@ Mobile App Development <br>
   </a>
 </p>
 
-Game dev Skills <br>
+Game Dev Skills <br>
 ---
 <p>
   <a href="https://skillicons.dev">
