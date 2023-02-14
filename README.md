@@ -1,11 +1,11 @@
 <h1 align="center">Hi 👋, I'm Denis</h1>
 <h3 align="center">Frontend Developer && UI/UX Designer</h3>
 
-Current Web Skills <br> 
+Frontend Development <br> 
 ---
 <p>
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=html,css,sass,js,react,ts,redux,tailwind,bootstrap,materialui,git,github,gitlab,vscode,vite,vue,webpack,gulp,jquery" />
+    <img src="https://skillicons.dev/icons?i=html,css,sass,react,redux,tailwind,bootstrap,materialui,git,github,gitlab,vscode,vite,vue,webpack,gulp" />
   </a>
 </p>
 
@@ -15,6 +15,12 @@ Current Design Skills <br>
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=ps,ae,au,ai,pr,autocad,blender,figma," />
   </a>
+</p>
+
+Backend Development <br> 
+---
+<p>
+ <a href="https://nestjs.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nestjs/nestjs-plain.svg" alt="nestjs" width="40" height="40"/> </a> <a href="https://nextjs.org/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/nextjs-2.svg" alt="nextjs" width="40" height="40"/> </a> <a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a>
 </p>
 
 Another Dev Skills <br> 
@@ -48,16 +54,6 @@ Game dev Skills <br>
     <img src="https://skillicons.dev/icons?i=godot, reactnative" />
   </a>
 </p>
-
-Plan to learn <br>
----
-<p>
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=neovim,java,spring,docker" />
-  </a>
-</p>
-
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=ssdeniss" alt="ssdeniss" /></a> </p>
 
 
 
