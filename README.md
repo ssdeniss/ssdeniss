@@ -5,7 +5,7 @@ Current Web Skills <br>
 ---
 <p>
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=html,css,js,react,ts,redux,tailwind,bootsrap,antd,git,github" />
+    <img src="https://skillicons.dev/icons?i=html,css,sass,js,react,ts,redux,tailwind,bootstrap,materialui,git,github,vscode,vite,npm,yarn,vue,webpack,gulp" />
   </a>
 </p>
 
