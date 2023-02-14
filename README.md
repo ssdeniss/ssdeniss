@@ -6,7 +6,7 @@
 [![Linkedin](https://img.shields.io/badge/rzashakeri-%231DA1F2.svg?style=for-the-badge&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/rzashakeri//)&nbsp;&nbsp;
 [![telegram](https://img.shields.io/badge/rzashakeri-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/rzashakeri/)&nbsp;&nbsp;&nbsp;
 
-<div style={{background: 'red'}}>this is test</div>
+<div style={background: 'red'}>this is test</div>
 Frontend Development <br> 
 ---
 <p>
