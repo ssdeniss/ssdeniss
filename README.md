@@ -5,7 +5,7 @@ Frontend Development <br>
 ---
 <p>
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=html,css,sass,react,redux,tailwind,bootstrap,materialui,git,github,gitlab,vscode,vite,vue,webpack,gulp,pug" />
+    <img src="https://skillicons.dev/icons?i=html,css,sass,react,redux,tailwind,bootstrap,materialui,git,github,gitlab,vscode,vite,vue,webpack,gulp,pug " />
   </a>
 </p>
 
