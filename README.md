@@ -5,7 +5,23 @@ Current Web Skills <br>
 ---
 <p>
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=html,css,sass,js,react,ts,redux,tailwind,bootstrap,materialui,git,github,vscode,vite,npm,yarn,vue,webpack,gulp" />
+    <img src="https://skillicons.dev/icons?i=html,css,sass,js,react,ts,redux,tailwind,bootstrap,materialui,git,github,gitlab,vscode,vite,vue,webpack,gulp,jquery" />
+  </a>
+</p>
+
+Current Design Skills <br> 
+---
+<p>
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=ps,ae,au,ai,pr,autocad,blender,figma," />
+  </a>
+</p>
+
+Another Dev Skills <br> 
+---
+<p>
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=docker,postman,powershell, " />
   </a>
 </p>
 
@@ -13,7 +29,15 @@ Have experiece with <br>
 ---
 <p>
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=angular,cs,dotnet,nestjs,express,mongodb,nodejs,nextjs,postgres,apollo,graphql" />
+    <img src="https://skillicons.dev/icons?i=c,cpp,java,py,idea,linux, matlab,octave, nestjs, nextjs, nodejs, express, bash,spring" />
+  </a>
+</p>
+
+Game dev Skills <br>
+---
+<p>
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=godot, reactnative" />
   </a>
 </p>
 
