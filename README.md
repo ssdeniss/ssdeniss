@@ -9,7 +9,7 @@ Frontend Development <br>
   </a>
 </p>
 
-Current Design Skills <br> 
+Design <br> 
 ---
 <p>
   <a href="https://skillicons.dev">
@@ -20,14 +20,22 @@ Current Design Skills <br>
 Backend Development <br> 
 ---
 <p>
- <a href="https://nestjs.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nestjs/nestjs-plain.svg" alt="nestjs" width="40" height="40"/> </a> <a href="https://nextjs.org/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/nextjs-2.svg" alt="nextjs" width="40" height="40"/> </a> <a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a>
+    <img src="https://skillicons.dev/icons?i=nodejs,spring,express,nestjs" />
+</p>
+
+Database <br>
+---
+<p>
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=mongodb,mysql"/>
+  </a>
 </p>
 
 Another Dev Skills <br> 
 ---
 <p>
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=docker,postman,powershell, " />
+    <img src="https://skillicons.dev/icons?i=docker,postman,powershell,maven,arduino" />
   </a>
 </p>
 
