@@ -20,7 +20,9 @@ Design <br>
 Backend Development <br> 
 ---
 <p>
+  <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=nodejs,spring,express,nestjs,java,spring,maven,hibernate" />
+   </a>
 </p>
 
 Database <br>
@@ -66,7 +68,9 @@ Game Dev Skills <br>
 Code Editor <br>
 ---
 <p>
+  <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=vscode,idea,visualstudio" />
+  </a>
 </p>
 
 Social <br>
