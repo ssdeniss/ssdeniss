@@ -5,7 +5,7 @@ Frontend Development <br>
 ---
 <p>
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=js,ts,html,css,sass,react,redux,tailwind,bootstrap,materialui,git,github,gitlab,vscode,vite,vue,webpack,gulp,pug " />
+    <img src="https://skillicons.dev/icons?i=js,ts,html,css,sass,react,redux,tailwind,bootstrap,materialui,git,github,gitlab,vscode,vite,vue,webpack,gulp,pug,babel " />
   </a>
 </p>
 
@@ -20,7 +20,7 @@ Design <br>
 Backend Development <br> 
 ---
 <p>
-    <img src="https://skillicons.dev/icons?i=nodejs,spring,express,nestjs,java,spring,maven" />
+    <img src="https://skillicons.dev/icons?i=nodejs,spring,express,nestjs,java,spring,maven,hibernate" />
 </p>
 
 Database <br>
@@ -43,7 +43,7 @@ Have Experiece With <br>
 ---
 <p>
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=c,cpp,py,idea,linux,matlab,octave,nextjs,bash," />
+    <img src="https://skillicons.dev/icons?i=c,cpp,py,linux,matlab,octave,nextjs,bash,fastapi,gatsby,php" />
   </a>
 </p>
 
@@ -63,7 +63,13 @@ Game Dev Skills <br>
   </a>
 </p>
 
-
+Code Editor <br>
+---
+<p>
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=vscode,idea,visualstudio" />
+  </a>
+</p>
 
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=ssdeniss&show_icons=true&locale=en&layout=compact" alt="ssdeniss" /></p>
 
