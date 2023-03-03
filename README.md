@@ -20,7 +20,7 @@ Design <br>
 Backend Development <br> 
 ---
 <p>
-    <img src="https://skillicons.dev/icons?i=nodejs,spring,express,nestjs," />
+    <img src="https://skillicons.dev/icons?i=nodejs,spring,express,nestjs,java,spring,maven" />
 </p>
 
 Database <br>
@@ -43,7 +43,7 @@ Have Experiece With <br>
 ---
 <p>
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=c,cpp,java,py,idea,linux,matlab,octave,nextjs,bash,spring,maven," />
+    <img src="https://skillicons.dev/icons?i=c,cpp,py,idea,linux,matlab,octave,nextjs,bash," />
   </a>
 </p>
 
