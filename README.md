@@ -66,17 +66,13 @@ Game Dev Skills <br>
 Code Editor <br>
 ---
 <p>
-  <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=vscode,idea,visualstudio" />
-  </a>
 </p>
 
 Social <br>
 ---
 <p style={{display: 'flex', alignItem: 'center'}}>
-  <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=linkedin" />
-  </a>
    <a href="https://www.linkedin.com/in/seremet-denis-530893250/">LinkedIn</a>
 </p>
 
