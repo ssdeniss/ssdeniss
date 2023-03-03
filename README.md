@@ -73,11 +73,11 @@ Code Editor <br>
 
 Social <br>
 ---
-<p>
+<p style={{display: 'flex', alignItem: 'center'}}>
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=linkedin" />
   </a>
-   <a>https://www.linkedin.com/in/seremet-denis-530893250/</a>
+   <a href="https://www.linkedin.com/in/seremet-denis-530893250/">LinkedIn</a>
 </p>
 
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=ssdeniss&show_icons=true&locale=en&layout=compact" alt="ssdeniss" /></p>
