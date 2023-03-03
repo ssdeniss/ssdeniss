@@ -75,8 +75,8 @@ Code Editor <br>
 
 Social <br>
 ---
-<p style="color: blue; font-size: 46px;">
-    <img src="https://skillicons.dev/icons?i=linkedin" />
+<p>
+   <img src="https://skillicons.dev/icons?i=linkedin" />
    <a href="https://www.linkedin.com/in/seremet-denis-530893250/">LinkedIn</a>
 </p>
 
