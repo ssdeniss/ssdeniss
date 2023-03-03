@@ -76,8 +76,8 @@ Social <br>
 <p>
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=linkedin" />
-    <p>https://www.linkedin.com/in/seremet-denis-530893250/</p>
   </a>
+   <a>https://www.linkedin.com/in/seremet-denis-530893250/</a>
 </p>
 
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=ssdeniss&show_icons=true&locale=en&layout=compact" alt="ssdeniss" /></p>
