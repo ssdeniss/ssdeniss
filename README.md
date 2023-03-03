@@ -71,6 +71,15 @@ Code Editor <br>
   </a>
 </p>
 
+Social <br>
+---
+<p>
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=linkedin" />
+    <p>https://www.linkedin.com/in/seremet-denis-530893250/</p>
+  </a>
+</p>
+
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=ssdeniss&show_icons=true&locale=en&layout=compact" alt="ssdeniss" /></p>
 
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=ssdeniss&show_icons=true&locale=en" alt="ssdeniss" /></p>
