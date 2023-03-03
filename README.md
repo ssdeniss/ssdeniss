@@ -75,7 +75,7 @@ Code Editor <br>
 
 Social <br>
 ---
-<p style="display: 'flex', alignItem: 'center'">
+<p style="display: flex; align-item: center;">
     <img src="https://skillicons.dev/icons?i=linkedin" />
    <a href="https://www.linkedin.com/in/seremet-denis-530893250/">LinkedIn</a>
 </p>
