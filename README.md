@@ -53,7 +53,7 @@ Mobile App Development <br>
 ---
 <p>
   <a href="https://skillicons.dev">
-     <img src="https://reactnative.dev/img/header_logo.svg" alt="reactnative" width="40" height="40"/>
+      <img src="https://skillicons.dev/icons?i=react,androidstudio" />
   </a>
 </p>
 
