@@ -45,7 +45,7 @@ Have Experiece With <br>
 ---
 <p>
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=c,cpp,py,linux,matlab,octave,nextjs,bash,fastapi,gatsby,php,angular" />
+    <img src="https://skillicons.dev/icons?i=c,cpp,py,linux,matlab,octave,nextjs,bash,fastapi,gatsby,php,angular,rabbitmq" />
   </a>
 </p>
 
