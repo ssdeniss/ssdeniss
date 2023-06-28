@@ -21,7 +21,7 @@ Backend Development <br>
 ---
 <p>
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=nodejs,spring,express,nestjs,java,spring,maven,hibernate" />
+    <img src="https://skillicons.dev/icons?i=nodejs,spring,express,nestjs,java,maven,hibernate" />
    </a>
 </p>
 
