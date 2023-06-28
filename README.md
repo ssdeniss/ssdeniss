@@ -29,7 +29,7 @@ Database <br>
 ---
 <p>
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=mongodb,mysql,"/>
+    <img src="https://skillicons.dev/icons?i=mongodb,mysql,postgres"/>
   </a>
 </p>
 
