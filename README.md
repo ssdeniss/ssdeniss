@@ -76,11 +76,11 @@ Code Editor <br>
 Social <br>
 ---
 <p>
-   <a target="_blank" href="https://www.linkedin.com/in/seremet-denis-530893250/">
+   <a target="_blank" href="https://www.linkedin.com/in/%C8%99eremet-denis-530893250/">
      <img src="https://skillicons.dev/icons?i=linkedin" />
   </a>
 </p>
 
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=ssdeniss&show_icons=true&locale=en&layout=compact" alt="ssdeniss" /></p>
+<!-- <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=ssdeniss&show_icons=true&locale=en&layout=compact" alt="ssdeniss" /></p>
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=ssdeniss&show_icons=true&locale=en" alt="ssdeniss" /></p>
+<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=ssdeniss&show_icons=true&locale=en" alt="ssdeniss" /></p> -->
