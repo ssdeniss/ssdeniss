@@ -12,7 +12,7 @@
 
 I'm a frontend developer and UI/UX designer who works across the whole stack. I design in Figma and ship in TypeScript, and I care most about the details in between: spacing, motion, and interfaces that *feel* fast.
 
-At **Urchin Systems** I build the web apps behind **Plextera**, a document-intelligence and automation platform. That includes its studio, its document-insights tools, its forms and its OCR gateway, built with React, Next.js, Redux and Angular.
+At **Urchin Systems** I build the web apps behind **Plextera**, a document-intelligence and automation platform. That includes its studio, its document-insights tools, its forms and its OCR gateway, built with React, Next.js and Redux.
 
 <br/>
 
