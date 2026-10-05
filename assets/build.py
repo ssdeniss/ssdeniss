@@ -44,7 +44,7 @@ def d(i):
 def hero(t):
     h = 520
     info = [("ROLE", "Senior Frontend Developer"), ("COMPANY", "Urchin Systems"),
-            ("EXPERIENCE", "Full stack since 2021"), ("BASED IN", "Chișinău, Moldova"),
+            ("EXPERIENCE", "6+ years, full stack"), ("BASED IN", "Chișinău, Moldova"),
             ("EDUCATION", "Technical University of Moldova")]
     rows = "".join(
         f'<g class="in" {d(.5 + i * .1)}>'
@@ -347,7 +347,7 @@ def footer(t):
 
 SECTIONS = [("about", "01", "About"), ("experience", "02", "Experience"), ("knowledge", "03", "Knowledge"),
             ("projects", "04", "Selected projects"), ("work", "05", "Side project"), ("contact", "06", "Elsewhere")]
-VERSION = "v7"
+VERSION = "v8"
 
 if __name__ == "__main__":
     for name, t in THEMES.items():
