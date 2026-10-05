@@ -45,12 +45,15 @@ def d(i):
 # ---------------------------------------------------------------- hero
 def hero(t):
     h = 520
-    index = ["Senior Frontend Developer", "UI/UX Designer", "Full Stack Developer", "Urchin Systems"]
+    info = [("ROLE", "Senior Frontend Developer"), ("COMPANY", "Urchin Systems"),
+            ("EXPERIENCE", "6+ years, full stack"), ("BASED IN", "Chișinău, Moldova"),
+            ("EDUCATION", "Technical University of Moldova")]
     rows = "".join(
-        f'<g class="in" {d(.5 + i * .12)}>'
-        f'<text x="780" y="{232 + i * 46}" class="mono" font-size="15" fill="{t["accent"]}">0{i + 1}</text>'
-        f'<text x="824" y="{232 + i * 46}" class="sans" font-size="23" fill="{t["text"]}">{s}</text></g>'
-        for i, s in enumerate(index))
+        f'<g class="in" {d(.5 + i * .1)}>'
+        f'<line x1="690" y1="{170 + i * 52}" x2="1144" y2="{170 + i * 52}" stroke="{t["line"]}"/>'
+        f'<text x="690" y="{202 + i * 52}" class="mono" font-size="13" fill="{t["accent"]}">{k}</text>'
+        f'<text x="820" y="{203 + i * 52}" class="sans" font-size="20" fill="{t["text"]}">{v}</text></g>'
+        for i, (k, v) in enumerate(info))
     css = f"""
       .orb {{ animation: drift 14s ease-in-out infinite alternate; transform-origin: center; }}
       @keyframes drift {{ from {{ transform: translate(0,0) scale(1); }} to {{ transform: translate(-120px,60px) scale(1.15); }} }}
@@ -82,15 +85,15 @@ def hero(t):
 
   <text x="56" y="66" class="mono in" font-size="15" fill="{t['muted']}">SSDENISS / README.MD</text>
   <g class="in" {d(.1)}>
-    <circle class="ring" cx="806" cy="61" r="6" fill="none" stroke="{t['accent']}" stroke-width="2"/>
-    <circle cx="806" cy="61" r="5" fill="{t['brand']}"/>
+    <circle class="ring" cx="834" cy="61" r="6" fill="none" stroke="{t['accent']}" stroke-width="2"/>
+    <circle cx="834" cy="61" r="5" fill="{t['brand']}"/>
     <text x="1144" y="66" class="mono" font-size="15" fill="{t['text']}" text-anchor="end">FRONTEND <tspan fill="{t['accent']}">·</tspan> UI/UX <tspan fill="{t['accent']}">·</tspan> FULL STACK</text>
   </g>
   <line x1="56" y1="92" x2="1144" y2="92" stroke="{t['line']}"/>
 
   <g class="sans" font-weight="700" fill="{t['text']}" letter-spacing="-5">
-    <text x="50" y="270" font-size="138" class="in" {d(.15)}>Denis</text>
-    <text x="50" y="402" font-size="138" class="in" {d(.3)}>Șeremet<tspan fill="{t['brand']}">.</tspan></text>
+    <text x="50" y="270" font-size="124" class="in" {d(.15)}>Denis</text>
+    <text x="50" y="392" font-size="124" class="in" {d(.3)}>Șeremet<tspan fill="{t['brand']}">.</tspan></text>
   </g>
   {rows}
 
@@ -221,7 +224,7 @@ LABELS = dict(ts="TypeScript", js="JavaScript", react="React", redux="Redux", ne
               androidstudio="Android", docker="Docker", postman="Postman", linux="Linux", bash="Bash",
               powershell="PowerShell", rabbitmq="RabbitMQ", c="C", cpp="C++", py="Python", fastapi="FastAPI",
               php="PHP", gatsby="Gatsby", matlab="MATLAB", octave="Octave", arduino="Arduino",
-              raspberrypi="Raspberry Pi", godot="Godot", vscode="VS Code", idea="IntelliJ",
+              raspberrypi="Raspberry Pi", unity="Unity", godot="Godot", vscode="VS Code", idea="IntelliJ",
               visualstudio="Visual Studio")
 
 # rows of (title, icons, columns-span out of 4)
@@ -230,7 +233,7 @@ KNOWLEDGE = [
     [("Design", "figma ps ai ae pr au blender autocad", 2), ("Backend", "nodejs express nestjs java spring maven hibernate", 2)],
     [("Build & tooling", "vite webpack babel gulp pug git github gitlab", 2), ("DevOps & more", "docker postman linux bash powershell rabbitmq", 2)],
     [("Also experienced with", "c cpp py fastapi php gatsby matlab octave arduino raspberrypi", 4)],
-    [("Databases", "postgres mysql mongodb", 1), ("Mobile", "react androidstudio", 1), ("Game dev", "godot", 1), ("Editors", "vscode idea visualstudio", 1)],
+    [("Databases", "postgres mysql mongodb", 1), ("Mobile", "react androidstudio", 1), ("Game dev", "unity godot", 1), ("Editors", "vscode idea visualstudio", 1)],
 ]
 
 ICON, CELL_W, CELL_H, PAD, GAP, HEAD = 48, 82, 92, 24, 16, 70
@@ -275,6 +278,33 @@ def knowledge(t, theme):
     return svg(int(y - GAP), body, "", "Knowledge: " + ", ".join(LABELS[k] for r in KNOWLEDGE for _, ks, _ in r for k in ks.split()))
 
 
+
+# ---------------------------------------------------------------- selected projects
+PROJECTS = [
+    ("plextera", "plextera.com", "Plextera", "Cloud-native document processing", "WORK · URCHIN"),
+    ("ocrgateway", "ocrgateway.com", "OCR Gateway", "OCR and document data extraction", "WORK · URCHIN"),
+    ("movesflow", "movesflow.it", "MovesFlow", "Operations app for moving companies", "PERSONAL"),
+    ("xpedite", "xpeditepermits.com", "XPMaps", "Oversize trucking permit cost estimator", "WEB APP"),
+    ("angro", "angro.md", "Angro.md", "Wholesale and retail trade platform", "WEBSITE"),
+    ("neocomputer", "neocomputer.md", "NeoComputer", "Electronics repair service in Chișinău", "WEBSITE"),
+]
+
+
+def project(t, i, domain, name, desc, tag):
+    w, h = 590, 168
+    body = f"""
+  <rect x=".5" y=".5" width="{w - 1}" height="{h - 1}" rx="18" fill="{t['surface']}" stroke="{t['line']}"/>
+  <text x="28" y="44" class="mono" font-size="13" fill="{t['accent']}">{i:02d}</text>
+  <text x="{w - 28}" y="44" class="mono" font-size="12" fill="{t['muted']}" text-anchor="end">{tag}</text>
+  <text x="28" y="94" class="sans" font-size="30" font-weight="700" letter-spacing="-.8" fill="{t['text']}">{name}</text>
+  <text x="28" y="126" class="sans" font-size="17" fill="{t['muted']}">{desc}</text>
+  <text x="28" y="152" class="mono" font-size="12" fill="{t['text']}" opacity=".7">{domain}</text>
+  <g transform="translate({w - 52} 118)"><circle r="18" fill="none" stroke="{t['line']}"/>
+    <path d="M-5 5 L5 -5 M-3 -5 H5 V3" stroke="{t['accent']}" stroke-width="2" fill="none" stroke-linecap="round"/></g>
+"""
+    return f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="{name}: {desc}"><title>{name}</title><style>{BASE_CSS}</style>{body}</svg>\n'
+
+
 # ---------------------------------------------------------------- footer
 def footer(t):
     css = ".caret { animation: blink 1.1s steps(1) infinite; }"
@@ -287,14 +317,17 @@ def footer(t):
     return svg(72, body, css, "Footer")
 
 
-SECTIONS = [("about", "01", "About"), ("knowledge", "02", "Knowledge"), ("work", "03", "Side project"), ("contact", "04", "Elsewhere")]
-VERSION = "v5"
+SECTIONS = [("about", "01", "About"), ("knowledge", "02", "Knowledge"), ("projects", "03", "Selected projects"),
+            ("work", "04", "Side project"), ("contact", "05", "Elsewhere")]
+VERSION = "v6"
 
 if __name__ == "__main__":
     for name, t in THEMES.items():
         files = {"hero": hero(t), "movesflow-board": board(t), "knowledge": knowledge(t, name), "footer": footer(t)}
         for key, num, title in SECTIONS:
             files[f"label-{key}"] = label(t, num, title)
+        for i, (slug, *rest) in enumerate(PROJECTS, 1):
+            files[f"project-{slug}"] = project(t, i, *rest)
         for f, content in files.items():
             (OUT / f"{f}-{name}.{VERSION}.svg").write_text(content, encoding="utf-8")
     print("built", len(list(OUT.glob(f"*.{VERSION}.svg"))), "svgs")
