@@ -25,8 +25,6 @@ MONO = "'JetBrains Mono', 'SF Mono', ui-monospace, Menlo, Consolas, monospace"
 BASE_CSS = f"""
   .sans {{ font-family: {SANS}; }}
   .mono {{ font-family: {MONO}; letter-spacing: .06em; }}
-  .in {{ opacity: 0; animation: in .9s cubic-bezier(.2,.7,.2,1) forwards; }}
-  @keyframes in {{ from {{ opacity: 0; transform: translateY(10px); }} to {{ opacity: 1; transform: none; }} }}
   @keyframes blink {{ 0%, 49% {{ opacity: 1; }} 50%, 100% {{ opacity: 0; }} }}
   @keyframes pulse {{ 0% {{ r: 6; opacity: .9; }} 100% {{ r: 18; opacity: 0; }} }}
   @media (prefers-reduced-motion: reduce) {{ * {{ animation: none !important; opacity: 1 !important; }} }}
@@ -46,7 +44,7 @@ def d(i):
 def hero(t):
     h = 520
     info = [("ROLE", "Senior Frontend Developer"), ("COMPANY", "Urchin Systems"),
-            ("EXPERIENCE", "6+ years, full stack"), ("BASED IN", "Chișinău, Moldova"),
+            ("EXPERIENCE", "Full stack since 2021"), ("BASED IN", "Chișinău, Moldova"),
             ("EDUCATION", "Technical University of Moldova")]
     rows = "".join(
         f'<g class="in" {d(.5 + i * .1)}>'
@@ -210,6 +208,36 @@ def card(t, x, y, title, sub, chip, c, faded=False, hl=False):
             f'<text x="{x + 180 - cw / 2}" y="{y + 80}" class="mono" font-size="11" fill="{c}" text-anchor="middle">{chip.upper()}</text></g>')
 
 
+
+# ---------------------------------------------------------------- experience timeline
+EXPERIENCE = [
+    ("JAN 2025 — NOW", "Frontend Developer", "Urchin Systems", "Plextera · OCR Gateway", "HYBRID · CHIȘINĂU", True),
+    ("OCT 2022 — JAN 2025", "Full Stack Developer", "S&amp;T Mold", "PostgreSQL · React Native", "ON-SITE · CHIȘINĂU", False),
+    ("JAN 2022 — OCT 2022", "Frontend Developer", "Minicode", "Vue · Node.js · Photoshop", "FULL-TIME", False),
+    ("JAN 2021 — FEB 2022", "Frontend Web Developer", "Freelance", "HTML · CSS · Sass", "CHIȘINĂU", False),
+]
+
+
+def experience(t):
+    rh = 112
+    h = len(EXPERIENCE) * rh
+    css = ".ring { animation: pulse 1.8s ease-out infinite; }"
+    body = f'<line x1="276" y1="40" x2="276" y2="{h - 40}" stroke="{t["line"]}" stroke-width="2"/>'
+    for i, (period, role, company, stack, where, now) in enumerate(EXPERIENCE):
+        y = i * rh
+        dot = (f'<circle class="ring" cx="276" cy="{y + 46}" r="6" fill="none" stroke="{t["accent"]}" stroke-width="2"/>'
+               f'<circle cx="276" cy="{y + 46}" r="7" fill="{t["brand"]}" stroke="{t["accent"]}" stroke-width="2"/>') if now else \
+              f'<circle cx="276" cy="{y + 46}" r="6" fill="{t["bg"]}" stroke="{t["muted"]}" stroke-width="2"/>'
+        body += (f'<text x="0" y="{y + 51}" class="mono" font-size="13" fill="{t["accent"] if now else t["muted"]}">{period}</text>'
+                 + dot +
+                 f'<text x="316" y="{y + 54}" class="sans" font-size="26" font-weight="650" letter-spacing="-.5" fill="{t["text"]}">{role}</text>'
+                 f'<text x="316" y="{y + 84}" class="sans" font-size="18" fill="{t["muted"]}"><tspan fill="{t["text"]}">{company}</tspan>  ·  {stack}</text>'
+                 f'<text x="{W}" y="{y + 51}" class="mono" font-size="12" fill="{t["muted"]}" text-anchor="end">{where}</text>')
+        if i < len(EXPERIENCE) - 1:
+            body += f'<line x1="316" y1="{y + rh - 4}" x2="{W}" y2="{y + rh - 4}" stroke="{t["line"]}" opacity=".6"/>'
+    return svg(h, body, css, "Experience: " + "; ".join(f"{r} at {c}, {p.title()}" for p, r, c, *_ in EXPERIENCE))
+
+
 # ---------------------------------------------------------------- knowledge bento
 import base64
 
@@ -317,13 +345,13 @@ def footer(t):
     return svg(72, body, css, "Footer")
 
 
-SECTIONS = [("about", "01", "About"), ("knowledge", "02", "Knowledge"), ("projects", "03", "Selected projects"),
-            ("work", "04", "Side project"), ("contact", "05", "Elsewhere")]
-VERSION = "v6"
+SECTIONS = [("about", "01", "About"), ("experience", "02", "Experience"), ("knowledge", "03", "Knowledge"),
+            ("projects", "04", "Selected projects"), ("work", "05", "Side project"), ("contact", "06", "Elsewhere")]
+VERSION = "v7"
 
 if __name__ == "__main__":
     for name, t in THEMES.items():
-        files = {"hero": hero(t), "movesflow-board": board(t), "knowledge": knowledge(t, name), "footer": footer(t)}
+        files = {"hero": hero(t), "movesflow-board": board(t), "knowledge": knowledge(t, name), "experience": experience(t), "footer": footer(t)}
         for key, num, title in SECTIONS:
             files[f"label-{key}"] = label(t, num, title)
         for i, (slug, *rest) in enumerate(PROJECTS, 1):
