@@ -17,7 +17,7 @@
 const denis = {
   role:       "Senior Frontend Developer & UI/UX Designer",
   company:    "Urchin Systems",
-  building:   "Movesflow — SaaS for moving companies 🚚",
+  building:   "movesflow.it — SaaS for moving companies 🚚",
   focus:      ["React", "TypeScript", "Design systems", "UX that feels fast"],
   alsoBuild:  ["Spring Boot APIs", "React Native apps", "Odoo modules", "3D in Blender"],
   designTools:["Figma", "Photoshop", "Illustrator", "After Effects"],
@@ -62,11 +62,18 @@ const denis = {
   </tr>
 </table>
 
-### 🚚 Main project — Movesflow
+### 🚚 Main project — [movesflow.it](https://movesflow.it)
 
-<a href="https://movesflow.it"><img src="https://img.shields.io/badge/movesflow.it-visit-00c853?style=for-the-badge&logo=googlechrome&logoColor=white" alt="movesflow.it" /></a>
+<div align="center">
+<a href="https://movesflow.it"><img src="https://movesflow.it/movesflow-logo.png" alt="MovesFlow" width="520" /></a>
 
-**Movesflow** is a multi-tenant SaaS platform for moving companies. It covers the whole job, from the first customer request to the final invoice. I'm building it as a React + Spring Boot monorepo, rebuilt from scratch to replace an earlier Odoo version.
+<b>Requests, surveys, quotes, orders, crews, vehicles, payments and invoices in one system.</b><br/>
+<i>Fewer spreadsheets, fewer scattered WhatsApp messages, more control from first request to finished move.</i>
+
+<a href="https://movesflow.it"><img src="https://img.shields.io/badge/%F0%9F%8C%90%20Visit-movesflow.it-FF7A00?style=for-the-badge" alt="Visit movesflow.it" /></a>
+</div>
+
+**[MovesFlow](https://movesflow.it)** is a multi-tenant SaaS platform for moving companies. It covers the whole job, from the first customer request to the final invoice. I'm building it as a React + Spring Boot monorepo, rebuilt from scratch to replace an earlier Odoo version.
 
 <table>
   <tr>
