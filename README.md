@@ -1,13 +1,13 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.svg">
-  <img alt="Denis Șeremet, Senior Frontend Developer and UI/UX Designer" src="./assets/hero-light.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.svg?v=2">
+  <img alt="Denis Șeremet, Senior Frontend Developer and UI/UX Designer" src="./assets/hero-light.svg?v=2" width="100%">
 </picture>
 
 <br/><br/>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/label-about-dark.svg">
-  <img alt="01 About" src="./assets/label-about-light.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/label-about-dark.svg?v=2">
+  <img alt="01 About" src="./assets/label-about-light.svg?v=2" width="100%">
 </picture>
 
 I design and build interfaces, usually both at once. At **Urchin Systems** I work on **Plextera**, a document-intelligence and automation platform: its studio, its document-insights tools, its forms and its OCR gateway.
@@ -19,8 +19,8 @@ I care about three things: interfaces that *feel* fast, design systems that keep
 <br/>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/label-work-dark.svg">
-  <img alt="02 Selected work" src="./assets/label-work-light.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/label-work-dark.svg?v=2">
+  <img alt="02 Selected work" src="./assets/label-work-light.svg?v=2" width="100%">
 </picture>
 
 #### [movesflow.it](https://movesflow.it) — operations SaaS for moving companies
@@ -29,14 +29,14 @@ Requests, surveys, quotes, orders, crews, vehicles, payments and invoices in one
 
 <a href="https://movesflow.it">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/movesflow-board-dark.svg">
-  <img alt="Illustration of the MovesFlow dispatch board" src="./assets/movesflow-board-light.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/movesflow-board-dark.svg?v=2">
+  <img alt="Illustration of the MovesFlow dispatch board" src="./assets/movesflow-board-light.svg?v=2" width="100%">
 </picture>
 </a>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/movesflow-stats-dark.svg">
-  <img alt="465 commits, 21 API modules, 280+ TSX files, 86 database migrations" src="./assets/movesflow-stats-light.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/movesflow-stats-dark.svg?v=2">
+  <img alt="465 commits, 21 API modules, 280+ TSX files, 86 database migrations" src="./assets/movesflow-stats-light.svg?v=2" width="100%">
 </picture>
 
 **Front end** React 19, TypeScript, Vite, TanStack Router + Query, React Hook Form + Zod, MUI, i18next<br/>
@@ -69,27 +69,27 @@ flowchart LR
 <br/>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/movesflow-ecosystem-dark.svg">
-  <img alt="Around the platform: a mobile app for crews, the movesflow.it website, and the legacy Odoo v1" src="./assets/movesflow-ecosystem-light.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/movesflow-ecosystem-dark.svg?v=2">
+  <img alt="Around the platform: a mobile app for crews, the movesflow.it website, and the legacy Odoo v1" src="./assets/movesflow-ecosystem-light.svg?v=2" width="100%">
 </picture>
 
 <br/><br/>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/label-toolkit-dark.svg">
-  <img alt="03 Toolkit" src="./assets/label-toolkit-light.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/label-toolkit-dark.svg?v=2">
+  <img alt="03 Toolkit" src="./assets/label-toolkit-light.svg?v=2" width="100%">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/toolkit-dark.svg">
-  <img alt="Toolkit: React, Next.js, Angular, Vue, TypeScript, Redux, TanStack Query, Zustand, Zod, MUI, Ant Design, Tailwind, SCSS, React Native, Expo, Spring Boot, Node.js, NestJS, PostgreSQL, MySQL, MongoDB, Vitest, Jest, Playwright, Figma, Photoshop, Illustrator, After Effects, Blender, Docker, Nginx, GitLab CI" src="./assets/toolkit-light.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/toolkit-dark.svg?v=2">
+  <img alt="Toolkit: React, Next.js, Angular, Vue, TypeScript, Redux, TanStack Query, Zustand, Zod, MUI, Ant Design, Tailwind, SCSS, React Native, Expo, Spring Boot, Node.js, NestJS, PostgreSQL, MySQL, MongoDB, Vitest, Jest, Playwright, Figma, Photoshop, Illustrator, After Effects, Blender, Docker, Nginx, GitLab CI" src="./assets/toolkit-light.svg?v=2" width="100%">
 </picture>
 
 <br/><br/>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/label-contact-dark.svg">
-  <img alt="04 Elsewhere" src="./assets/label-contact-light.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/label-contact-dark.svg?v=2">
+  <img alt="04 Elsewhere" src="./assets/label-contact-light.svg?v=2" width="100%">
 </picture>
 
 **[movesflow.it](https://movesflow.it)** &nbsp;·&nbsp; **[LinkedIn](https://www.linkedin.com/in/%C8%99eremet-denis-530893250/)** &nbsp;·&nbsp; Open to talking about UI, design systems and product engineering.
@@ -97,6 +97,6 @@ flowchart LR
 <br/>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/footer-dark.svg">
-  <img alt="" src="./assets/footer-light.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/footer-dark.svg?v=2">
+  <img alt="" src="./assets/footer-light.svg?v=2" width="100%">
 </picture>
