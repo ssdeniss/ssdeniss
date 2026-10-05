@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="84" viewBox="0 0 1200 84" role="img" aria-label="01 About"><title>01 About</title><style>
+  .sans { font-family: Inter, 'Segoe UI', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif; }
+  .mono { font-family: 'JetBrains Mono', 'SF Mono', ui-monospace, Menlo, Consolas, monospace; letter-spacing: .06em; }
+  .in { opacity: 0; animation: in .9s cubic-bezier(.2,.7,.2,1) forwards; }
+  @keyframes in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+  @keyframes pulse { 0% { r: 6; opacity: .9; } 100% { r: 18; opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; opacity: 1 !important; } }
+</style>
+  <text x="0" y="56" class="mono" font-size="16" fill="#4CC38A">01</text>
+  <text x="52" y="60" class="sans" font-size="36" font-weight="650" letter-spacing="-1" fill="#E9F1EC">About</text>
+  <line x1="380" y1="48" x2="1200" y2="48" stroke="#1F3329"/>
+  <rect x="1192" y="44" width="8" height="8" fill="#0B6E4F"/>
+</svg>

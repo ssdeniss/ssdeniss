@@ -1,6 +1,6 @@
 """Generates the profile README artwork in light and dark variants.
 
-Run:  python3 assets/build.py
+Run:  python3 assets/build.py   (bump VERSION so GitHub's image cache picks up changes)
 Every SVG is self-contained (system fonts, inline CSS animation) so GitHub can
 render it as an <img>. Edit the THEMES tokens or the copy below, then rebuild.
 """
@@ -10,12 +10,13 @@ OUT = Path(__file__).parent
 W = 1200
 
 THEMES = {
-    "dark": dict(bg="#0A0F0D", surface="#111816", sunken="#0C1210", line="#2C3A35",
-                 text="#ECF2EF", muted="#8C9A94", accent="#34D399", accent2="#2DD4BF",
-                 accentSoft="#34D39922", onAccent="#04241A", shadow="#00000088"),
-    "light": dict(bg="#F4F8F5", surface="#FFFFFF", sunken="#EDF3EF", line="#D3DED8",
-                  text="#0F1714", muted="#5F6B66", accent="#059669", accent2="#0D9488",
-                  accentSoft="#0596691A", onAccent="#FFFFFF", shadow="#0F17141F"),
+    # brand = deep green for fills and large shapes; accent = readable tint of it for small text
+    "dark": dict(bg="#07110D", surface="#0C1813", sunken="#09130F", line="#1F3329",
+                 text="#E9F1EC", muted="#86978E", brand="#0B6E4F", accent="#4CC38A", accent2="#2E9C74",
+                 accentSoft="#0B6E4F55", onAccent="#FFFFFF", shadow="#00000088"),
+    "light": dict(bg="#F3F7F4", surface="#FFFFFF", sunken="#ECF2EE", line="#D2DED7",
+                  text="#0E1713", muted="#5C6A63", brand="#0B6E4F", accent="#0B6E4F", accent2="#3E9C78",
+                  accentSoft="#0B6E4F1A", onAccent="#FFFFFF", shadow="#0E17131F"),
 }
 
 SANS = "Inter, 'Segoe UI', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif"
@@ -44,7 +45,7 @@ def d(i):
 # ---------------------------------------------------------------- hero
 def hero(t):
     h = 520
-    index = ["Senior Frontend Developer", "UI/UX Designer", "Urchin Systems", "Building MovesFlow"]
+    index = ["Senior Frontend Developer", "UI/UX Designer", "Full Stack Developer", "Urchin Systems"]
     rows = "".join(
         f'<g class="in" {d(.5 + i * .12)}>'
         f'<text x="780" y="{232 + i * 46}" class="mono" font-size="15" fill="{t["accent"]}">0{i + 1}</text>'
@@ -65,8 +66,8 @@ def hero(t):
       <stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
     </radialGradient>
     <mask id="m"><rect width="{W}" height="{h}" fill="url(#fade)"/></mask>
-    <radialGradient id="glow"><stop offset="0" stop-color="{t['accent']}" stop-opacity=".38"/>
-      <stop offset="1" stop-color="{t['accent']}" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glow"><stop offset="0" stop-color="{t['brand']}" stop-opacity=".75"/>
+      <stop offset="1" stop-color="{t['brand']}" stop-opacity="0"/></radialGradient>
     <radialGradient id="glow2"><stop offset="0" stop-color="{t['accent2']}" stop-opacity=".30"/>
       <stop offset="1" stop-color="{t['accent2']}" stop-opacity="0"/></radialGradient>
     <clipPath id="c"><rect width="{W}" height="{h}" rx="24"/></clipPath>
@@ -81,22 +82,22 @@ def hero(t):
 
   <text x="56" y="66" class="mono in" font-size="15" fill="{t['muted']}">SSDENISS / README.MD</text>
   <g class="in" {d(.1)}>
-    <circle class="ring" cx="846" cy="61" r="6" fill="none" stroke="{t['accent']}" stroke-width="2"/>
-    <circle cx="846" cy="61" r="5" fill="{t['accent']}"/>
-    <text x="1144" y="66" class="mono" font-size="15" fill="{t['text']}" text-anchor="end">NOW BUILDING <tspan fill="{t['accent']}">MOVESFLOW.IT</tspan></text>
+    <circle class="ring" cx="806" cy="61" r="6" fill="none" stroke="{t['accent']}" stroke-width="2"/>
+    <circle cx="806" cy="61" r="5" fill="{t['brand']}"/>
+    <text x="1144" y="66" class="mono" font-size="15" fill="{t['text']}" text-anchor="end">FRONTEND <tspan fill="{t['accent']}">·</tspan> UI/UX <tspan fill="{t['accent']}">·</tspan> FULL STACK</text>
   </g>
   <line x1="56" y1="92" x2="1144" y2="92" stroke="{t['line']}"/>
 
   <g class="sans" font-weight="700" fill="{t['text']}" letter-spacing="-5">
     <text x="50" y="270" font-size="138" class="in" {d(.15)}>Denis</text>
-    <text x="50" y="402" font-size="138" class="in" {d(.3)}>Șeremet<tspan fill="{t['accent']}">.</tspan></text>
+    <text x="50" y="402" font-size="138" class="in" {d(.3)}>Șeremet<tspan fill="{t['brand']}">.</tspan></text>
   </g>
   {rows}
 
   <line x1="56" y1="446" x2="1144" y2="446" stroke="{t['line']}"/>
   <text x="56" y="484" class="mono in" {d(.9)} font-size="15" fill="{t['muted']}">INTERFACES · DESIGN SYSTEMS · REACT · TYPESCRIPT · SPRING BOOT</text>
-  <text x="1012" y="484" class="mono in" {d(1)} font-size="15" fill="{t['text']}">movesflow.it</text>
-  <rect class="caret" x="1128" y="470" width="10" height="18" fill="{t['accent']}"/>
+  <text x="1110" y="484" class="mono in" {d(1)} font-size="15" fill="{t['text']}" text-anchor="end">hello, world</text>
+  <rect class="caret" x="1128" y="470" width="10" height="18" fill="{t['brand']}"/>
 """
     return svg(h, body, css, "Denis Șeremet — Senior Frontend Developer and UI/UX Designer")
 
@@ -107,7 +108,7 @@ def label(t, num, title):
   <text x="0" y="56" class="mono" font-size="16" fill="{t['accent']}">{num}</text>
   <text x="52" y="60" class="sans" font-size="36" font-weight="650" letter-spacing="-1" fill="{t['text']}">{title}</text>
   <line x1="380" y1="48" x2="{W}" y2="48" stroke="{t['line']}"/>
-  <rect x="{W - 8}" y="44" width="8" height="8" fill="{t['accent']}"/>
+  <rect x="{W - 8}" y="44" width="8" height="8" fill="{t['brand']}"/>
 """
     return svg(84, body, "", f"{num} {title}")
 
@@ -174,7 +175,7 @@ def board(t):
 
   <text x="248" y="104" class="sans" font-size="28" font-weight="700" letter-spacing="-.5" fill="{t['text']}">Today</text>
   <text x="340" y="104" class="sans" font-size="16" fill="{t['muted']}">Dispatch overview</text>
-  <rect x="1032" y="78" width="144" height="38" rx="10" fill="{t['accent']}"/>
+  <rect x="1032" y="78" width="144" height="38" rx="10" fill="{t['brand']}"/>
   <text x="1104" y="103" class="sans" font-size="16" font-weight="600" fill="{t['onAccent']}" text-anchor="middle">+ New order</text>
   {colsvg}
   <g class="mv">{moving}</g>
@@ -206,62 +207,72 @@ def card(t, x, y, title, sub, chip, c, faded=False, hl=False):
             f'<text x="{x + 180 - cw / 2}" y="{y + 80}" class="mono" font-size="11" fill="{c}" text-anchor="middle">{chip.upper()}</text></g>')
 
 
-# ---------------------------------------------------------------- stats strip
-def stats(t):
-    data = [("465", "COMMITS"), ("21", "API MODULES"), ("280+", "TSX FILES"), ("86", "DB MIGRATIONS")]
-    body = f'<line x1="0" y1="1" x2="{W}" y2="1" stroke="{t["line"]}"/><line x1="0" y1="139" x2="{W}" y2="139" stroke="{t["line"]}"/>'
-    for i, (n, l) in enumerate(data):
-        x = i * 300
-        if i:
-            body += f'<line x1="{x}" y1="24" x2="{x}" y2="116" stroke="{t["line"]}"/>'
-        body += (f'<g class="in" {d(i * .12)}><text x="{x + (0 if i == 0 else 32)}" y="82" class="sans" font-size="58" font-weight="700" letter-spacing="-2" fill="{t["text"]}">{n}</text>'
-                 f'<text x="{x + (0 if i == 0 else 32)}" y="112" class="mono" font-size="13" fill="{t["muted"]}">{l}</text></g>')
-    return svg(140, body, "", "MovesFlow web platform in numbers")
+# ---------------------------------------------------------------- knowledge bento
+import base64
 
+LABELS = dict(ts="TypeScript", js="JavaScript", react="React", redux="Redux", nextjs="Next.js", vue="Vue",
+              angular="Angular", html="HTML", css="CSS", sass="Sass", tailwind="Tailwind",
+              styledcomponents="Styled", materialui="MUI", bootstrap="Bootstrap", svg="SVG", vite="Vite",
+              webpack="Webpack", babel="Babel", gulp="Gulp", pug="Pug", git="Git", github="GitHub",
+              gitlab="GitLab", figma="Figma", ps="Photoshop", ai="Illustrator", ae="After Effects",
+              pr="Premiere", au="Audition", blender="Blender", autocad="AutoCAD", nodejs="Node.js",
+              express="Express", nestjs="NestJS", java="Java", spring="Spring", maven="Maven",
+              hibernate="Hibernate", postgres="Postgres", mysql="MySQL", mongodb="MongoDB",
+              androidstudio="Android", docker="Docker", postman="Postman", linux="Linux", bash="Bash",
+              powershell="PowerShell", rabbitmq="RabbitMQ", c="C", cpp="C++", py="Python", fastapi="FastAPI",
+              php="PHP", gatsby="Gatsby", matlab="MATLAB", octave="Octave", arduino="Arduino",
+              raspberrypi="Raspberry Pi", godot="Godot", vscode="VS Code", idea="IntelliJ",
+              visualstudio="Visual Studio")
 
-# ---------------------------------------------------------------- ecosystem
-def ecosystem(t):
-    items = [("MOBILE", "Field app for crews", ["Orders, chat, push notifications", "and proof-of-delivery photos"], "REACT NATIVE · EXPO"),
-             ("WEBSITE", "movesflow.it", ["Italian marketing site with", "move-request forms"], "ASTRO · TYPESCRIPT"),
-             ("LEGACY", "Odoo v1", ["The original platform, built", "as custom Odoo 19 modules"], "ODOO · PYTHON")]
-    body = ""
-    for i, (k, ttl, lines, stack) in enumerate(items):
-        x = i * 408
-        body += (f'<g class="in" {d(i * .12)}><rect x="{x + .5}" y=".5" width="383" height="219" rx="16" fill="{t["surface"]}" stroke="{t["line"]}"/>'
-                 f'<text x="{x + 28}" y="44" class="mono" font-size="13" fill="{t["accent"]}">{k}</text>'
-                 f'<text x="{x + 28}" y="84" class="sans" font-size="26" font-weight="650" letter-spacing="-.5" fill="{t["text"]}">{ttl}</text>'
-                 + "".join(f'<text x="{x + 28}" y="{118 + j * 24}" class="sans" font-size="16" fill="{t["muted"]}">{s}</text>' for j, s in enumerate(lines))
-                 + f'<line x1="{x + 28}" y1="170" x2="{x + 356}" y2="170" stroke="{t["line"]}"/>'
-                 f'<text x="{x + 28}" y="198" class="mono" font-size="12" fill="{t["muted"]}">{stack}</text></g>')
-    return svg(220, body, "", "MovesFlow ecosystem: mobile app, website and legacy Odoo platform")
-
-
-# ---------------------------------------------------------------- toolkit spec sheet
-TOOLKIT = [
-    ("INTERFACE", "React · Next.js · Angular · Vue · TypeScript"),
-    ("STATE & DATA", "Redux · TanStack Query · Zustand · Zod"),
-    ("STYLING", "MUI · Ant Design · Tailwind · SCSS · styled-components"),
-    ("MOBILE", "React Native · Expo"),
-    ("BACKEND", "Spring Boot · Node.js · NestJS · Express · jOOQ"),
-    ("DATABASES", "PostgreSQL · MySQL · MongoDB"),
-    ("QUALITY", "Vitest · Jest · Playwright · Testcontainers"),
-    ("DESIGN", "Figma · Photoshop · Illustrator · After Effects · Blender"),
-    ("OPS", "Docker · Nginx · GitLab CI · Linux"),
+# rows of (title, icons, columns-span out of 4)
+KNOWLEDGE = [
+    [("Frontend", "ts js react redux nextjs vue angular html css sass tailwind styledcomponents materialui bootstrap svg", 4)],
+    [("Design", "figma ps ai ae pr au blender autocad", 2), ("Backend", "nodejs express nestjs java spring maven hibernate", 2)],
+    [("Build & tooling", "vite webpack babel gulp pug git github gitlab", 2), ("DevOps & more", "docker postman linux bash powershell rabbitmq", 2)],
+    [("Also experienced with", "c cpp py fastapi php gatsby matlab octave arduino raspberrypi", 4)],
+    [("Databases", "postgres mysql mongodb", 1), ("Mobile", "react androidstudio", 1), ("Game dev", "godot", 1), ("Editors", "vscode idea visualstudio", 1)],
 ]
 
+ICON, CELL_W, CELL_H, PAD, GAP, HEAD = 48, 82, 92, 24, 16, 70
 
-def toolkit(t):
-    rh = 58
-    h = len(TOOLKIT) * rh + 2
+
+def icon_uri(key, theme):
+    raw = (OUT / "icons" / f"{key}-{theme}.svg").read_bytes()
+    return "data:image/svg+xml;base64," + base64.b64encode(raw).decode()
+
+
+def knowledge(t, theme):
+    unit = (W - 3 * GAP) / 4
+    y = 0
     body = ""
-    for i, (k, v) in enumerate(TOOLKIT):
-        y = i * rh
-        body += (f'<g class="in" {d(i * .06)}><line x1="0" y1="{y + 1}" x2="{W}" y2="{y + 1}" stroke="{t["line"]}"/>'
-                 f'<text x="0" y="{y + 37}" class="mono" font-size="13" fill="{t["accent"]}">{i + 1:02d}</text>'
-                 f'<text x="52" y="{y + 37}" class="mono" font-size="14" fill="{t["muted"]}">{k.replace("&", "&amp;")}</text>'
-                 f'<text x="300" y="{y + 38}" class="sans" font-size="21" fill="{t["text"]}">{v}</text></g>')
-    body += f'<line x1="0" y1="{h - 1}" x2="{W}" y2="{h - 1}" stroke="{t["line"]}"/>'
-    return svg(h, body, "", "Toolkit")
+    n = 0
+    for row in KNOWLEDGE:
+        cards = []
+        for title, keys, span in row:
+            keys = keys.split()
+            w = unit * span + GAP * (span - 1)
+            cw = min(CELL_W, (w - 2 * PAD) / len(keys))
+            per = len(keys) if cw >= 66 else max(1, int((w - 2 * PAD) // CELL_W))
+            cw = cw if cw >= 66 else CELL_W
+            rows = -(-len(keys) // per)
+            cards.append((title, keys, w, per, rows, cw))
+        h = HEAD + max(c[4] for c in cards) * CELL_H + 4
+        x = 0
+        for title, keys, w, per, rows, cw in cards:
+            n += 1
+            body += (f'<g class="in" {d(n * .06)}><rect x="{x + .5}" y="{y + .5}" width="{w - 1}" height="{h - 1}" rx="18" fill="{t["surface"]}" stroke="{t["line"]}"/>'
+                     f'<text x="{x + PAD}" y="{y + 44}" class="mono" font-size="13" fill="{t["accent"]}">{n:02d}</text>'
+                     f'<text x="{x + PAD + 36}" y="{y + 45}" class="sans" font-size="21" font-weight="650" letter-spacing="-.3" fill="{t["text"]}">{title.replace("&", "&amp;")}</text>'
+                     f'<text x="{x + w - PAD}" y="{y + 44}" class="mono" font-size="13" fill="{t["muted"]}" text-anchor="end">{len(keys):02d}</text>')
+            for k, key in enumerate(keys):
+                cx = x + PAD + (k % per) * cw
+                cy = y + HEAD + (k // per) * CELL_H
+                body += (f'<image href="{icon_uri(key, theme)}" x="{cx + (cw - ICON) / 2:.1f}" y="{cy}" width="{ICON}" height="{ICON}"/>'
+                         f'<text x="{cx + cw / 2:.1f}" y="{cy + ICON + 20}" class="sans" font-size="11.5" fill="{t["muted"]}" text-anchor="middle">{LABELS[key]}</text>')
+            body += "</g>"
+            x += w + GAP
+        y += h + GAP
+    return svg(int(y - GAP), body, "", "Knowledge: " + ", ".join(LABELS[k] for r in KNOWLEDGE for _, ks, _ in r for k in ks.split()))
 
 
 # ---------------------------------------------------------------- footer
@@ -271,19 +282,19 @@ def footer(t):
   <line x1="0" y1="1" x2="{W}" y2="1" stroke="{t['line']}"/>
   <text x="0" y="52" class="mono" font-size="14" fill="{t['muted']}">© 2026 DENIS ȘEREMET</text>
   <text x="{W - 24}" y="52" class="mono" font-size="14" fill="{t['muted']}" text-anchor="end">DESIGNED IN FIGMA · SHIPPED IN TYPESCRIPT</text>
-  <rect class="caret" x="{W - 10}" y="38" width="10" height="18" fill="{t['accent']}"/>
+  <rect class="caret" x="{W - 10}" y="38" width="10" height="18" fill="{t['brand']}"/>
 """
     return svg(72, body, css, "Footer")
 
 
-SECTIONS = [("about", "01", "About"), ("work", "02", "Selected work"), ("toolkit", "03", "Toolkit"), ("contact", "04", "Elsewhere")]
+SECTIONS = [("about", "01", "About"), ("knowledge", "02", "Knowledge"), ("work", "03", "Side project"), ("contact", "04", "Elsewhere")]
+VERSION = "v5"
 
 if __name__ == "__main__":
     for name, t in THEMES.items():
-        files = {"hero": hero(t), "movesflow-board": board(t), "movesflow-stats": stats(t),
-                 "movesflow-ecosystem": ecosystem(t), "toolkit": toolkit(t), "footer": footer(t)}
+        files = {"hero": hero(t), "movesflow-board": board(t), "knowledge": knowledge(t, name), "footer": footer(t)}
         for key, num, title in SECTIONS:
             files[f"label-{key}"] = label(t, num, title)
         for f, content in files.items():
-            (OUT / f"{f}-{name}.svg").write_text(content, encoding="utf-8")
-    print("built", len(list(OUT.glob("*.svg"))), "svgs")
+            (OUT / f"{f}-{name}.{VERSION}.svg").write_text(content, encoding="utf-8")
+    print("built", len(list(OUT.glob(f"*.{VERSION}.svg"))), "svgs")

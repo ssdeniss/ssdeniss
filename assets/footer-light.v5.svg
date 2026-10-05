@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="72" viewBox="0 0 1200 72" role="img" aria-label="Footer"><title>Footer</title><style>
+  .sans { font-family: Inter, 'Segoe UI', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif; }
+  .mono { font-family: 'JetBrains Mono', 'SF Mono', ui-monospace, Menlo, Consolas, monospace; letter-spacing: .06em; }
+  .in { opacity: 0; animation: in .9s cubic-bezier(.2,.7,.2,1) forwards; }
+  @keyframes in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+  @keyframes pulse { 0% { r: 6; opacity: .9; } 100% { r: 18; opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; opacity: 1 !important; } }
+.caret { animation: blink 1.1s steps(1) infinite; }</style>
+  <line x1="0" y1="1" x2="1200" y2="1" stroke="#D2DED7"/>
+  <text x="0" y="52" class="mono" font-size="14" fill="#5C6A63">© 2026 DENIS ȘEREMET</text>
+  <text x="1176" y="52" class="mono" font-size="14" fill="#5C6A63" text-anchor="end">DESIGNED IN FIGMA · SHIPPED IN TYPESCRIPT</text>
+  <rect class="caret" x="1190" y="38" width="10" height="18" fill="#0B6E4F"/>
+</svg>
