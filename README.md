@@ -62,86 +62,92 @@ const denis = {
   </tr>
 </table>
 
-### 🚚 Movesflow — my main project
+### 🚚 Main project — Movesflow
 
 <a href="https://movesflow.it"><img src="https://img.shields.io/badge/movesflow.it-visit-00c853?style=for-the-badge&logo=googlechrome&logoColor=white" alt="movesflow.it" /></a>
 
-**Movesflow** is an operations platform for moving companies: orders, dispatch, scheduling, fleet, chat, pricing and invoicing, all in one place. It started on Odoo, and I'm now rebuilding it as a modern React + Spring Boot product with a companion mobile app for drivers and managers.
+**Movesflow** is a multi-tenant SaaS platform for moving companies. It covers the whole job, from the first customer request to the final invoice. I'm building it as a React + Spring Boot monorepo, rebuilt from scratch to replace an earlier Odoo version.
 
 <table>
   <tr>
-    <td width="50%" valign="top">
-      <h4>🖥️ Web platform</h4>
-      Multi-tenant SPA + API monorepo<br/><br/>
+    <td valign="top" width="58%">
+      <h4>✨ What it does</h4>
+      📦 <b>Orders and move requests</b> from public forms to job board<br/>
+      🗓️ <b>Scheduling and calendar</b> for crews and jobs<br/>
+      🚛 <b>Fleet and service regions</b><br/>
+      💬 <b>Real-time chat</b> with staff and clients (WebSocket + STOMP)<br/>
+      🧾 <b>Pricing, billing and accounting</b><br/>
+      📋 <b>On-site surveys</b><br/>
+      🔔 <b>Notifications</b> and a live <b>dashboard</b><br/>
+      🏢 <b>Multi-tenant</b> company settings, roles and users
+    </td>
+    <td valign="top" width="42%">
+      <h4>🧱 Built with</h4>
+      <b>Frontend</b><br/>
       <img src="https://img.shields.io/badge/React%2019-20232A?logo=react&logoColor=61DAFB" />
+      <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white" />
       <img src="https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white" />
       <img src="https://img.shields.io/badge/TanStack-FF4154?logo=reactquery&logoColor=white" />
       <img src="https://img.shields.io/badge/MUI-007FFF?logo=mui&logoColor=white" />
-      <img src="https://img.shields.io/badge/Zod-3E67B1?logo=zod&logoColor=white" /><br/>
+      <img src="https://img.shields.io/badge/Zod-3E67B1?logo=zod&logoColor=white" />
+      <img src="https://img.shields.io/badge/i18next-26A69A?logo=i18next&logoColor=white" /><br/>
+      <b>Backend</b><br/>
+      <img src="https://img.shields.io/badge/Java-ED8B00?logo=openjdk&logoColor=white" />
       <img src="https://img.shields.io/badge/Spring%20Boot-6DB33F?logo=springboot&logoColor=white" />
       <img src="https://img.shields.io/badge/jOOQ-005571" />
       <img src="https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white" />
       <img src="https://img.shields.io/badge/Flyway-CC0200?logo=flyway&logoColor=white" />
-      <img src="https://img.shields.io/badge/OpenAPI-6BA539?logo=openapiinitiative&logoColor=white" />
-    </td>
-    <td width="50%" valign="top">
-      <h4>📱 Mobile app</h4>
-      Internal app for drivers and managers: orders, chat, push notifications, proof-of-delivery photos<br/><br/>
-      <img src="https://img.shields.io/badge/React%20Native-20232A?logo=react&logoColor=61DAFB" />
-      <img src="https://img.shields.io/badge/Expo-000020?logo=expo&logoColor=white" />
-      <img src="https://img.shields.io/badge/Zustand-443E38" />
-      <img src="https://img.shields.io/badge/i18next-26A69A?logo=i18next&logoColor=white" />
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h4>🌐 Marketing site</h4>
-      Italian landing site for <a href="https://movesflow.it">movesflow.it</a><br/><br/>
-      <img src="https://img.shields.io/badge/Astro-BC52EE?logo=astro&logoColor=white" />
-      <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white" />
+      <img src="https://img.shields.io/badge/OpenAPI-6BA539?logo=openapiinitiative&logoColor=white" /><br/>
+      <b>Quality and ops</b><br/>
+      <img src="https://img.shields.io/badge/Vitest-6E9F18?logo=vitest&logoColor=white" />
+      <img src="https://img.shields.io/badge/Playwright-2EAD33?logo=playwright&logoColor=white" />
+      <img src="https://img.shields.io/badge/Testcontainers-2496ED" />
       <img src="https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white" />
-    </td>
-    <td width="50%" valign="top">
-      <h4>🧩 Odoo platform (v1)</h4>
-      The original Movesflow, built as custom Odoo 19 modules<br/><br/>
-      <img src="https://img.shields.io/badge/Odoo%2019-714B67?logo=odoo&logoColor=white" />
-      <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" />
-      <img src="https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white" />
+      <img src="https://img.shields.io/badge/Nginx-009639?logo=nginx&logoColor=white" />
     </td>
   </tr>
 </table>
 
+<div align="center">
+
+![commits](https://img.shields.io/badge/commits-465-00c853?style=flat-square)
+![api modules](https://img.shields.io/badge/API%20modules-21-00897b?style=flat-square)
+![react components](https://img.shields.io/badge/.tsx%20files-280%2B-26a69a?style=flat-square)
+![migrations](https://img.shields.io/badge/DB%20migrations-86-80cbc4?style=flat-square)
+
+</div>
+
 <details>
-<summary><b>🏗️ How it fits together</b> (click to expand)</summary>
+<summary><b>🏗️ Architecture</b> (click to expand)</summary>
 
 ```mermaid
 flowchart LR
-    W[🖥️ React web app] -->|generated TS client| API
-    M[📱 Expo mobile app] --> API
-    API[☕ Spring Boot API<br/>modular monolith] --> DB[(🐘 PostgreSQL)]
-    S[🌐 Astro site<br/>movesflow.it] -.->|move requests| API
+    subgraph web["apps/web · React SPA"]
+      F[features/*] --> UI["@movesflow/ui<br/>design system"]
+    end
+    F -->|"generated TS client<br/>(packages/api-client)"| API
+    subgraph api["apps/api · Spring Boot modular monolith"]
+      API[REST + STOMP] --> MOD["orders · scheduling · fleet · chat<br/>pricing · billing · accounting · surveys"]
+    end
+    MOD -->|jOOQ| DB[(PostgreSQL)]
+    MOB[📱 Expo mobile app] --> API
 ```
 
-**API modules:** orders · scheduling · dispatch & fleet · chat · notifications · pricing · billing · accounting · surveys · multi-tenant auth
+- **Contract-first:** the backend's OpenAPI spec generates the TypeScript client, so frontend and API types never drift apart.
+- **Layered modules:** each backend module is split into `api / application / domain / infrastructure`.
+- **Shared design system:** buttons, cards and menus live in `packages/ui`, so features don't each build their own.
 
 </details>
 
-<details>
-<summary><b>📈 Commits so far</b> (click to expand)</summary>
+#### 🧩 Around it
 
-```mermaid
-%%{init: {'theme':'base','themeVariables':{'pie1':'#00c853','pie2':'#00897b','pie3':'#26a69a','pie4':'#80cbc4','pieStrokeColor':'#0d1117','pieOuterStrokeColor':'#0d1117','pieTitleTextColor':'#8b949e','pieLegendTextColor':'#8b949e','pieSectionTextColor':'#ffffff'}}}%%
-pie showData
-    title Commits per Movesflow repo
-    "Web platform (React + Spring)" : 465
-    "Odoo platform" : 279
-    "Mobile app" : 54
-    "Marketing site" : 41
-```
+| | Project | Stack |
+| --- | --- | --- |
+| 📱 | **Mobile app**: internal app for drivers and managers, with orders, chat, push notifications and proof-of-delivery photos | React Native · Expo · Zustand · TanStack Query |
+| 🌐 | **Marketing site**: [movesflow.it](https://movesflow.it), the Italian landing site | Astro · TypeScript · Docker |
+| 🧩 | **Odoo v1**: the original platform, built as custom Odoo 19 modules | Odoo · Python · Docker |
 
-</details>
-
-### 📌 Featured projects
+### 📌 Public repos
 
 <div align="center">
 
