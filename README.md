@@ -47,18 +47,24 @@ Currently a **Senior Frontend Developer at Urchin Systems**, building **Plextera
   <img alt="04 Selected projects" src="./assets/label-projects-light.v9.svg" width="100%">
 </picture>
 
-<a href="https://www.movesflow.it/en"><picture>
+<a href="https://www.movesflow.it/en">
+<picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/project-movesflow-dark.v9.svg">
-  <img alt="MovesFlow: operations app for moving companies (personal project)" src="./assets/project-movesflow-light.v9.svg" width="32.5%">
-</picture></a>
-<a href="https://plextera.com/"><picture>
+  <img alt="MovesFlow: operations app for moving companies (personal project)" src="./assets/project-movesflow-light.v9.svg" width="32%">
+</picture>
+</a>
+<a href="https://plextera.com/">
+<picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/project-plextera-dark.v9.svg">
-  <img alt="Plextera: cloud-native document processing platform" src="./assets/project-plextera-light.v9.svg" width="32.5%">
-</picture></a>
-<a href="https://ocrgateway.com/"><picture>
+  <img alt="Plextera: cloud-native document processing platform" src="./assets/project-plextera-light.v9.svg" width="32%">
+</picture>
+</a>
+<a href="https://ocrgateway.com/">
+<picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/project-ocrgateway-dark.v9.svg">
-  <img alt="OCR Gateway: OCR and document data extraction" src="./assets/project-ocrgateway-light.v9.svg" width="32.5%">
-</picture></a>
+  <img alt="OCR Gateway: OCR and document data extraction" src="./assets/project-ocrgateway-light.v9.svg" width="32%">
+</picture>
+</a>
 
 <br/><br/>
 
