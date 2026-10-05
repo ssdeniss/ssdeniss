@@ -211,10 +211,10 @@ def card(t, x, y, title, sub, chip, c, faded=False, hl=False):
 
 # ---------------------------------------------------------------- experience timeline
 EXPERIENCE = [
-    ("JAN 2025 — NOW", "Frontend Developer", "Urchin Systems", "Plextera · OCR Gateway", "HYBRID · CHIȘINĂU", True),
-    ("OCT 2022 — JAN 2025", "Full Stack Developer", "S&amp;T Mold", "PostgreSQL · React Native", "ON-SITE · CHIȘINĂU", False),
-    ("JAN 2022 — OCT 2022", "Frontend Developer", "Minicode", "Vue · Node.js · Photoshop", "FULL-TIME", False),
-    ("JAN 2021 — FEB 2022", "Frontend Web Developer", "Freelance", "HTML · CSS · Sass", "CHIȘINĂU", False),
+    ("JAN 2025 — NOW", "Senior Frontend Developer", "Urchin Systems", "Plextera microfrontends, AI widget", "CHIȘINĂU", True),
+    ("SEP 2022 — JAN 2025", "Full Stack Developer", "S&amp;T Mold", "Customs Service of Moldova, E-Bursa", "CHIȘINĂU", False),
+    ("DEC 2021 — SEP 2022", "Frontend Developer", "Minicode", "Xpedite Permits, Mirri, Angro", "CHIȘINĂU", False),
+    ("MAY 2020 — DEC 2021", "Frontend Developer", "Freelance", "Websites for clients on Habr", "REMOTE", False),
 ]
 
 
@@ -310,8 +310,9 @@ def knowledge(t, theme):
 # ---------------------------------------------------------------- selected projects
 PROJECTS = [
     ("movesflow", "movesflow.it", "MovesFlow", ["Operations app for", "moving companies"], "PERSONAL"),
-    ("plextera", "plextera.com", "Plextera", ["Cloud-native document", "processing platform"], "URCHIN"),
-    ("ocrgateway", "ocrgateway.com", "OCR Gateway", ["OCR and document", "data extraction"], "URCHIN"),
+    ("plextera", "plextera.com", "Plextera", ["Workforce management and", "compliance platform"], "URCHIN"),
+    ("frontiera", "customs service of moldova", "FRONTIERA", ["Border-crossing information", "system with device integrations"], "S&amp;T · CUSTOMS"),
+    ("ecustoms", "ecustoms.trade.gov.md", "Customs Portal", ["Public portal: taxes, parcel", "checks and MPay payments"], "S&amp;T · CUSTOMS"),
 ]
 
 
@@ -326,10 +327,48 @@ def project(t, i, domain, name, desc, tag):
   <text x="28" y="158" class="sans" font-size="18" fill="{t['muted']}">{desc[1]}</text>
   <line x1="28" y1="178" x2="{w - 28}" y2="178" stroke="{t['line']}"/>
   <text x="28" y="202" class="mono" font-size="12" fill="{t['text']}" opacity=".75">{domain}</text>
-  <g transform="translate({w - 40} 197) scale(.8)"><circle r="18" fill="none" stroke="{t['line']}"/>
-    <path d="M-5 5 L5 -5 M-3 -5 H5 V3" stroke="{t['accent']}" stroke-width="2" fill="none" stroke-linecap="round"/></g>
 """
+    if "." in domain:  # only linkable projects get the arrow
+        body += f"""<g transform="translate({w - 40} 197) scale(.8)"><circle r="18" fill="none" stroke="{t['line']}"/>
+    <path d="M-5 5 L5 -5 M-3 -5 H5 V3" stroke="{t['accent']}" stroke-width="2" fill="none" stroke-linecap="round"/></g>"""
     return f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="{name}: {' '.join(desc)}"><title>{name}</title><style>{BASE_CSS}</style>{body}</svg>\n'
+
+
+
+# ---------------------------------------------------------------- beyond code
+LANGS = [("Romanian", "Native", 6), ("Russian", "C2", 6), ("English", "B2", 4), ("German", "A1", 1)]
+AWARDS = [("Hackathon IX, UTM", "2023"), ("Hackathon, UTM", "2022"), ("Microelectronic Systems contest", "2022"),
+          ("Earth Rover Innovation Challenge", "2021")]
+HARDWARE = [("FarmBot", "automated crop growing"), ("SkyFly", "drone control app"),
+            ("Work Inspector", "room sensor monitoring"), ("CyberCar", "Bluetooth-driven car")]
+
+
+def beyond(t):
+    cw, h, gap = 389, 300, 16
+    body = ""
+    heads = [("01", "Languages"), ("02", "Awards"), ("03", "Hardware &amp; IoT")]
+    for c, (n, title) in enumerate(heads):
+        x = c * (cw + gap)
+        body += (f'<rect x="{x + .5}" y=".5" width="{cw - 1}" height="{h - 1}" rx="18" fill="{t["surface"]}" stroke="{t["line"]}"/>'
+                 f'<text x="{x + 24}" y="44" class="mono" font-size="13" fill="{t["accent"]}">{n}</text>'
+                 f'<text x="{x + 60}" y="45" class="sans" font-size="21" font-weight="650" letter-spacing="-.3" fill="{t["text"]}">{title}</text>')
+        for r in range(4):
+            y = 98 + r * 52
+            body += f'<line x1="{x + 24}" y1="{y + 22}" x2="{x + cw - 24}" y2="{y + 22}" stroke="{t["line"]}" opacity=".6"/>'
+            if c == 0:
+                name, lvl, n6 = LANGS[r]
+                body += (f'<text x="{x + 24}" y="{y}" class="sans" font-size="17" fill="{t["text"]}">{name}</text>'
+                         f'<text x="{x + cw - 24}" y="{y}" class="mono" font-size="12" fill="{t["muted"]}" text-anchor="end">{lvl.upper()}</text>'
+                         + "".join(f'<rect x="{x + 150 + k * 22}" y="{y - 10}" width="16" height="6" rx="3" fill="{t["brand"] if k < n6 else t["line"]}"/>' for k in range(6)))
+            elif c == 1:
+                name, yr = AWARDS[r]
+                body += (f'<text x="{x + 24}" y="{y}" class="sans" font-size="16" fill="{t["text"]}">{name}</text>'
+                         f'<text x="{x + cw - 24}" y="{y}" class="mono" font-size="12" fill="{t["muted"]}" text-anchor="end">{yr}</text>')
+            else:
+                name, what = HARDWARE[r]
+                body += (f'<text x="{x + 24}" y="{y}" class="sans" font-size="16" fill="{t["text"]}">{name}'
+                         f'<tspan fill="{t["muted"]}">  ·  {what}</tspan></text>')
+    return svg(h, body, "", "Languages: Romanian native, Russian C2, English B2, German A1. Awards: hackathons at UTM 2022 and 2023, Microelectronic Systems contest 2022, Earth Rover Innovation Challenge 2021. Hardware projects: FarmBot, SkyFly, Work Inspector, CyberCar.")
 
 
 # ---------------------------------------------------------------- footer
@@ -344,13 +383,14 @@ def footer(t):
     return svg(72, body, css, "Footer")
 
 
-SECTIONS = [("about", "01", "About"), ("experience", "02", "Experience"), ("knowledge", "03", "Knowledge"),
-            ("projects", "04", "Selected projects"), ("work", "05", "Side project"), ("contact", "06", "Elsewhere")]
-VERSION = "v9"
+SECTIONS = [("about", "01", "About"), ("experience", "02", "Experience"), ("projects", "03", "Selected projects"),
+            ("knowledge", "04", "Knowledge"), ("beyond", "05", "Beyond code"), ("work", "06", "Side project"),
+            ("contact", "07", "Elsewhere")]
+VERSION = "v10"
 
 if __name__ == "__main__":
     for name, t in THEMES.items():
-        files = {"hero": hero(t), "movesflow-board": board(t), "knowledge": knowledge(t, name), "experience": experience(t), "footer": footer(t)}
+        files = {"hero": hero(t), "movesflow-board": board(t), "knowledge": knowledge(t, name), "experience": experience(t), "beyond": beyond(t), "footer": footer(t)}
         for key, num, title in SECTIONS:
             files[f"label-{key}"] = label(t, num, title)
         for i, (slug, *rest) in enumerate(PROJECTS, 1):

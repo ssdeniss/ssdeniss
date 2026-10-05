@@ -13,6 +13,5 @@
   <text x="28" y="158" class="sans" font-size="18" fill="#86978E">moving companies</text>
   <line x1="28" y1="178" x2="364" y2="178" stroke="#1F3329"/>
   <text x="28" y="202" class="mono" font-size="12" fill="#E9F1EC" opacity=".75">movesflow.it</text>
-  <g transform="translate(352 197) scale(.8)"><circle r="18" fill="none" stroke="#1F3329"/>
-    <path d="M-5 5 L5 -5 M-3 -5 H5 V3" stroke="#4CC38A" stroke-width="2" fill="none" stroke-linecap="round"/></g>
-</svg>
+<g transform="translate(352 197) scale(.8)"><circle r="18" fill="none" stroke="#1F3329"/>
+    <path d="M-5 5 L5 -5 M-3 -5 H5 V3" stroke="#4CC38A" stroke-width="2" fill="none" stroke-linecap="round"/></g></svg>
