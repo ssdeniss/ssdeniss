@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00e676,100:00897b&height=190&section=header&text=Hi%2C%20I'm%20Denis%20%F0%9F%91%8B&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=Senior%20Frontend%20Developer%20%26%20UI%2FUX%20Designer&descAlignY=58&descSize=18" alt="Hi, I'm Denis" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00e676,100:00897b&height=190&section=header&text=Hi%2C%20I%27m%20Denis&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=Senior%20Frontend%20Developer%20%26%20UI%2FUX%20Designer&descAlignY=58&descSize=18" alt="Hi, I'm Denis" width="100%" />
 
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=3000&pause=900&color=00C853&center=true&vCenter=true&width=600&lines=Frontend+%40+Urchin+Systems;React+%E2%80%A2+TypeScript+%E2%80%A2+Next.js+%E2%80%A2+Angular;Designing+in+Figma%2C+shipping+in+code;Pixel-perfect+UIs+that+feel+fast+%E2%9A%A1" alt="typing intro" />
 
