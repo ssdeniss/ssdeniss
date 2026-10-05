@@ -311,7 +311,7 @@ def knowledge(t, theme):
 PROJECTS = [
     ("movesflow", "movesflow.it", "MovesFlow", ["Operations app for", "moving companies"], "PERSONAL"),
     ("plextera", "plextera.com", "Plextera", ["Workforce management and", "compliance platform"], "URCHIN"),
-    ("frontiera", "customs service of moldova", "FRONTIERA", ["Border-crossing information", "system with device integrations"], "S&amp;T · CUSTOMS"),
+    ("frontiera", "Customs Service of Moldova", "FRONTIERA", ["Border-crossing information", "system with device integrations"], "S&amp;T · CUSTOMS"),
     ("ecustoms", "ecustoms.trade.gov.md", "Customs Portal", ["Public portal: taxes, parcel", "checks and MPay payments"], "S&amp;T · CUSTOMS"),
 ]
 
@@ -386,7 +386,7 @@ def footer(t):
 SECTIONS = [("about", "01", "About"), ("experience", "02", "Experience"), ("projects", "03", "Selected projects"),
             ("knowledge", "04", "Knowledge"), ("beyond", "05", "Beyond code"), ("work", "06", "Side project"),
             ("contact", "07", "Elsewhere")]
-VERSION = "v10"
+VERSION = "v11"
 
 if __name__ == "__main__":
     for name, t in THEMES.items():
