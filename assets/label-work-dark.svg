@@ -7,8 +7,8 @@
   @keyframes pulse { 0% { r: 6; opacity: .9; } 100% { r: 18; opacity: 0; } }
   @media (prefers-reduced-motion: reduce) { * { animation: none !important; opacity: 1 !important; } }
 </style>
-  <text x="0" y="56" class="mono" font-size="16" fill="#FF7A00">02</text>
-  <text x="52" y="60" class="sans" font-size="36" font-weight="650" letter-spacing="-1" fill="#ECEDEF">Selected work</text>
-  <line x1="380" y1="48" x2="1200" y2="48" stroke="#232831"/>
-  <rect x="1192" y="44" width="8" height="8" fill="#FF7A00"/>
+  <text x="0" y="56" class="mono" font-size="16" fill="#34D399">02</text>
+  <text x="52" y="60" class="sans" font-size="36" font-weight="650" letter-spacing="-1" fill="#ECF2EF">Selected work</text>
+  <line x1="380" y1="48" x2="1200" y2="48" stroke="#2C3A35"/>
+  <rect x="1192" y="44" width="8" height="8" fill="#34D399"/>
 </svg>

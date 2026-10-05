@@ -7,8 +7,8 @@
   @keyframes pulse { 0% { r: 6; opacity: .9; } 100% { r: 18; opacity: 0; } }
   @media (prefers-reduced-motion: reduce) { * { animation: none !important; opacity: 1 !important; } }
 .caret { animation: blink 1.1s steps(1) infinite; }</style>
-  <line x1="0" y1="1" x2="1200" y2="1" stroke="#232831"/>
-  <text x="0" y="52" class="mono" font-size="14" fill="#8A929E">© 2026 DENIS ȘEREMET</text>
-  <text x="1176" y="52" class="mono" font-size="14" fill="#8A929E" text-anchor="end">DESIGNED IN FIGMA · SHIPPED IN TYPESCRIPT</text>
-  <rect class="caret" x="1190" y="38" width="10" height="18" fill="#FF7A00"/>
+  <line x1="0" y1="1" x2="1200" y2="1" stroke="#2C3A35"/>
+  <text x="0" y="52" class="mono" font-size="14" fill="#8C9A94">© 2026 DENIS ȘEREMET</text>
+  <text x="1176" y="52" class="mono" font-size="14" fill="#8C9A94" text-anchor="end">DESIGNED IN FIGMA · SHIPPED IN TYPESCRIPT</text>
+  <rect class="caret" x="1190" y="38" width="10" height="18" fill="#34D399"/>
 </svg>

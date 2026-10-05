@@ -10,12 +10,12 @@ OUT = Path(__file__).parent
 W = 1200
 
 THEMES = {
-    "dark": dict(bg="#0B0D10", surface="#12151A", sunken="#0E1014", line="#232831",
-                 text="#ECEDEF", muted="#8A929E", accent="#FF7A00", accent2="#4C7BF4",
-                 accentSoft="#FF7A0022", shadow="#00000088"),
-    "light": dict(bg="#F7F6F2", surface="#FFFFFF", sunken="#F1EFEA", line="#E3E0D8",
-                  text="#121417", muted="#6B7078", accent="#E8620C", accent2="#2F5BD3",
-                  accentSoft="#E8620C1A", shadow="#1214171F"),
+    "dark": dict(bg="#0A0F0D", surface="#111816", sunken="#0C1210", line="#2C3A35",
+                 text="#ECF2EF", muted="#8C9A94", accent="#34D399", accent2="#2DD4BF",
+                 accentSoft="#34D39922", onAccent="#04241A", shadow="#00000088"),
+    "light": dict(bg="#F4F8F5", surface="#FFFFFF", sunken="#EDF3EF", line="#D3DED8",
+                  text="#0F1714", muted="#5F6B66", accent="#059669", accent2="#0D9488",
+                  accentSoft="#0596691A", onAccent="#FFFFFF", shadow="#0F17141F"),
 }
 
 SANS = "Inter, 'Segoe UI', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif"
@@ -127,7 +127,7 @@ def board(t):
                    f'<text x="62" y="{y + 3}" class="sans" font-size="17" fill="{t["text"] if active else t["muted"]}" '
                    f'font-weight="{600 if active else 400}">{n}</text>')
 
-    cols = [("REQUEST", t["accent2"]), ("SCHEDULED", t["muted"]), ("IN TRANSIT", t["accent"]), ("DONE", "#22A06B")]
+    cols = [("REQUEST", t["accent2"]), ("SCHEDULED", t["muted"]), ("IN TRANSIT", t["accent"]), ("DONE", t["muted"])]
     cards = {
         0: [("Milano → Torino", "Survey pending", "Survey"), ("Bergamo → Como", "Quote requested", "Quote")],
         1: [("Roma → Napoli", "3 movers · 1 van", "Fri 08:00"), ("Verona → Padova", "2 movers · 1 van", "Fri 13:30")],
@@ -166,16 +166,16 @@ def board(t):
   <text x="{W / 2}" y="31" class="mono" font-size="14" fill="{t['muted']}" text-anchor="middle">MOVESFLOW — DISPATCH BOARD</text>
   <line x1="0" y1="52" x2="{W}" y2="52" stroke="{t['line']}"/>
 
-  <path d="M30 76 l14 8 v18 l-14 -8z" fill="{t['accent']}"/><path d="M48 84 l14 -8 v18 l-14 8z" fill="{t['accent']}" opacity=".8"/>
-  <path d="M40 70 l12 -7 l10 6 l-12 7z" fill="{t['accent2']}"/>
-  <text x="74" y="96" class="sans" font-size="20" font-weight="700" fill="{t['text']}">Moves<tspan fill="{t['accent2']}">Flow</tspan></text>
+  <path d="M30 76 l14 8 v18 l-14 -8z" fill="#FF7A00"/><path d="M48 84 l14 -8 v18 l-14 8z" fill="#FF7A00" opacity=".8"/>
+  <path d="M40 70 l12 -7 l10 6 l-12 7z" fill="#2F5BD3"/>
+  <text x="74" y="96" class="sans" font-size="20" font-weight="700" fill="{t['text']}">Moves<tspan fill="#4C7BF4">Flow</tspan></text>
   {navsvg}
   <line x1="220" y1="52" x2="220" y2="{h}" stroke="{t['line']}"/>
 
   <text x="248" y="104" class="sans" font-size="28" font-weight="700" letter-spacing="-.5" fill="{t['text']}">Today</text>
   <text x="340" y="104" class="sans" font-size="16" fill="{t['muted']}">Dispatch overview</text>
   <rect x="1032" y="78" width="144" height="38" rx="10" fill="{t['accent']}"/>
-  <text x="1104" y="103" class="sans" font-size="16" font-weight="600" fill="#fff" text-anchor="middle">+ New order</text>
+  <text x="1104" y="103" class="sans" font-size="16" font-weight="600" fill="{t['onAccent']}" text-anchor="middle">+ New order</text>
   {colsvg}
   <g class="mv">{moving}</g>
 
@@ -200,7 +200,7 @@ def card(t, x, y, title, sub, chip, c, faded=False, hl=False):
     return (f'<g{op}><rect x="{x}" y="{y}" width="196" height="96" rx="12" fill="{t["surface"]}" stroke="{stroke}" stroke-width="{sw}"{f}/>'
             f'<text x="{x + 16}" y="{y + 30}" class="sans" font-size="16" font-weight="600" fill="{t["text"]}">{title}</text>'
             f'<text x="{x + 16}" y="{y + 52}" class="sans" font-size="13" fill="{t["muted"]}">{sub}</text>'
-            f'<circle cx="{x + 26}" cy="{y + 76}" r="9" fill="{t["accent2"]}" opacity=".85"/>'
+            f'<circle cx="{x + 26}" cy="{y + 76}" r="9" fill="{t["muted"]}" opacity=".85"/>'
             f'<circle cx="{x + 40}" cy="{y + 76}" r="9" fill="{t["accent"]}" opacity=".85" stroke="{t["surface"]}" stroke-width="2"/>'
             f'<rect x="{x + 180 - cw}" y="{y + 66}" width="{cw}" height="20" rx="10" fill="none" stroke="{c}"/>'
             f'<text x="{x + 180 - cw / 2}" y="{y + 80}" class="mono" font-size="11" fill="{c}" text-anchor="middle">{chip.upper()}</text></g>')
