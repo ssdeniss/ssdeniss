@@ -309,28 +309,27 @@ def knowledge(t, theme):
 
 # ---------------------------------------------------------------- selected projects
 PROJECTS = [
-    ("plextera", "plextera.com", "Plextera", "Cloud-native document processing", "WORK · URCHIN"),
-    ("ocrgateway", "ocrgateway.com", "OCR Gateway", "OCR and document data extraction", "WORK · URCHIN"),
-    ("movesflow", "movesflow.it", "MovesFlow", "Operations app for moving companies", "PERSONAL"),
-    ("xpedite", "xpeditepermits.com", "XPMaps", "Oversize trucking permit cost estimator", "WEB APP"),
-    ("angro", "angro.md", "Angro.md", "Wholesale and retail trade platform", "WEBSITE"),
-    ("neocomputer", "neocomputer.md", "NeoComputer", "Electronics repair service in Chișinău", "WEBSITE"),
+    ("movesflow", "movesflow.it", "MovesFlow", ["Operations app for", "moving companies"], "PERSONAL"),
+    ("plextera", "plextera.com", "Plextera", ["Cloud-native document", "processing platform"], "URCHIN"),
+    ("ocrgateway", "ocrgateway.com", "OCR Gateway", ["OCR and document", "data extraction"], "URCHIN"),
 ]
 
 
 def project(t, i, domain, name, desc, tag):
-    w, h = 590, 168
+    w, h = 392, 220
     body = f"""
   <rect x=".5" y=".5" width="{w - 1}" height="{h - 1}" rx="18" fill="{t['surface']}" stroke="{t['line']}"/>
   <text x="28" y="44" class="mono" font-size="13" fill="{t['accent']}">{i:02d}</text>
   <text x="{w - 28}" y="44" class="mono" font-size="12" fill="{t['muted']}" text-anchor="end">{tag}</text>
-  <text x="28" y="94" class="sans" font-size="30" font-weight="700" letter-spacing="-.8" fill="{t['text']}">{name}</text>
-  <text x="28" y="126" class="sans" font-size="17" fill="{t['muted']}">{desc}</text>
-  <text x="28" y="152" class="mono" font-size="12" fill="{t['text']}" opacity=".7">{domain}</text>
-  <g transform="translate({w - 52} 118)"><circle r="18" fill="none" stroke="{t['line']}"/>
+  <text x="28" y="98" class="sans" font-size="32" font-weight="700" letter-spacing="-.8" fill="{t['text']}">{name}</text>
+  <text x="28" y="134" class="sans" font-size="18" fill="{t['muted']}">{desc[0]}</text>
+  <text x="28" y="158" class="sans" font-size="18" fill="{t['muted']}">{desc[1]}</text>
+  <line x1="28" y1="178" x2="{w - 28}" y2="178" stroke="{t['line']}"/>
+  <text x="28" y="202" class="mono" font-size="12" fill="{t['text']}" opacity=".75">{domain}</text>
+  <g transform="translate({w - 40} 197) scale(.8)"><circle r="18" fill="none" stroke="{t['line']}"/>
     <path d="M-5 5 L5 -5 M-3 -5 H5 V3" stroke="{t['accent']}" stroke-width="2" fill="none" stroke-linecap="round"/></g>
 """
-    return f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="{name}: {desc}"><title>{name}</title><style>{BASE_CSS}</style>{body}</svg>\n'
+    return f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="{name}: {' '.join(desc)}"><title>{name}</title><style>{BASE_CSS}</style>{body}</svg>\n'
 
 
 # ---------------------------------------------------------------- footer
@@ -347,7 +346,7 @@ def footer(t):
 
 SECTIONS = [("about", "01", "About"), ("experience", "02", "Experience"), ("knowledge", "03", "Knowledge"),
             ("projects", "04", "Selected projects"), ("work", "05", "Side project"), ("contact", "06", "Elsewhere")]
-VERSION = "v8"
+VERSION = "v9"
 
 if __name__ == "__main__":
     for name, t in THEMES.items():

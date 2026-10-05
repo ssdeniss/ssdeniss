@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="392" height="220" viewBox="0 0 392 220" role="img" aria-label="MovesFlow: Operations app for moving companies"><title>MovesFlow</title><style>
+  .sans { font-family: Inter, 'Segoe UI', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif; }
+  .mono { font-family: 'JetBrains Mono', 'SF Mono', ui-monospace, Menlo, Consolas, monospace; letter-spacing: .06em; }
+  @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+  @keyframes pulse { 0% { r: 6; opacity: .9; } 100% { r: 18; opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; opacity: 1 !important; } }
+</style>
+  <rect x=".5" y=".5" width="391" height="219" rx="18" fill="#FFFFFF" stroke="#D2DED7"/>
+  <text x="28" y="44" class="mono" font-size="13" fill="#0B6E4F">01</text>
+  <text x="364" y="44" class="mono" font-size="12" fill="#5C6A63" text-anchor="end">PERSONAL</text>
+  <text x="28" y="98" class="sans" font-size="32" font-weight="700" letter-spacing="-.8" fill="#0E1713">MovesFlow</text>
+  <text x="28" y="134" class="sans" font-size="18" fill="#5C6A63">Operations app for</text>
+  <text x="28" y="158" class="sans" font-size="18" fill="#5C6A63">moving companies</text>
+  <line x1="28" y1="178" x2="364" y2="178" stroke="#D2DED7"/>
+  <text x="28" y="202" class="mono" font-size="12" fill="#0E1713" opacity=".75">movesflow.it</text>
+  <g transform="translate(352 197) scale(.8)"><circle r="18" fill="none" stroke="#D2DED7"/>
+    <path d="M-5 5 L5 -5 M-3 -5 H5 V3" stroke="#0B6E4F" stroke-width="2" fill="none" stroke-linecap="round"/></g>
+</svg>
