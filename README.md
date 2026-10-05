@@ -130,6 +130,7 @@ flowchart LR
 <summary><b>📈 Commits so far</b> (click to expand)</summary>
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'pie1':'#00c853','pie2':'#00897b','pie3':'#26a69a','pie4':'#80cbc4','pieStrokeColor':'#0d1117','pieOuterStrokeColor':'#0d1117','pieTitleTextColor':'#8b949e','pieLegendTextColor':'#8b949e','pieSectionTextColor':'#ffffff'}}}%%
 pie showData
     title Commits per Movesflow repo
     "Web platform (React + Spring)" : 465
