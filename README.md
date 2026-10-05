@@ -10,7 +10,7 @@
   <img alt="01 About" src="./assets/label-about-light.v7.svg" width="100%">
 </picture>
 
-I'm a full-stack developer who has been modern web applications and frontend systems that scale **since 2021**. My focus is the JavaScript and TypeScript ecosystem (React, Angular, Node.js), and I take products from architecture and UI design all the way to deployment.
+I'm a full-stack developer who has been building modern web applications and frontend systems that scale **since 2021**. My focus is the JavaScript and TypeScript ecosystem (React, Angular, Node.js), and I take products from architecture and UI design all the way to deployment.
 
 I care about clean, maintainable interfaces, performance, and reusable UI architecture that grows with the product and the team. I prototype in Figma, so the design and the code come from the same hands.
 
